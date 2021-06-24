@@ -16,23 +16,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home.index');
 });
+Route::get('login', [
+    'uses' => 'HomeController@showLogin',
+    'as' => 'showLogin'
+]);
+Route::get('register', [
+    'uses' => 'HomeController@showRegister',
+    'as' => 'showRegister'
+]);
 
 Route::name('auth.')->namespace('Auth')->group(function() {
-    Route::get('login', [
-        'uses' => 'AuthController@showLogin',
-        'as' => 'showLogin'
-    ]);
-    Route::get('register', [
-        'uses' => 'AuthController@showRegister',
-        'as' => 'showRegister'
-    ]);
     Route::post('endwLogin', [
-        'uses' => 'AuthController@endowmentLogin',
+        'uses' => 'EndowmnetsController@login',
         'as' => 'endowmentLogin'
     ]);
     Route::post('charLogin', [
-        'uses' => 'AuthController@charLogin',
-        'as' => 'charLogin'
+        'uses' => 'CharitiesController@login',
+        'as' => 'charityLogin'
+    ]);
+    Route::post('endwRegister', [
+        'uses' => 'EndowmnetsController@register',
+        'as' => 'endowmentRegister'
+    ]);
+    Route::post('charRegister', [
+        'uses' => 'CharitiesController@register',
+        'as' => 'charityRegister'
     ]);
 });
 

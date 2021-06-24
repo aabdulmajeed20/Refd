@@ -8,15 +8,15 @@
 	<title>منصة رِفد - منصة خيرية موثوقة</title>
 
 	<!-- All Plugins Css -->
-	<link href="assets/css/plugins.css" rel="stylesheet">
+	<link href="{{ URL::to('src/css/plugins.css') }}" rel="stylesheet">
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- Custom CSS -->
-	<link href="assets/css/styles.css" rel="stylesheet">
-	<link href="assets/css/rtl.css" rel="stylesheet">
+	<link href="{{ URL::to('src/css/styles.css') }}" rel="stylesheet">
+	<link href="{{ URL::to('src/css/rtl.css') }}" rel="stylesheet">
 	<style>
 		body{
-			background-image: url('assets/img/bg.jpg');
 			height: 100vh;
 			background-size: cover;
 		}
@@ -41,7 +41,7 @@
 	</style>
 </head>
 
-<body class="blue-skin">
+<body class="blue-skin" style="background-image: url({{URL::to('src/img/bg.jpg')}})">
 	<!-- ============================================================== -->
 	<!-- Preloader - style you can find in spinners.css -->
 	<!-- ============================================================== -->
@@ -296,7 +296,7 @@
 								</div>
 								<div class="form-group">
 									<label> تاريخ انتهاء مجلس الادارة </label>
-									<input placeholder="17/4/2022" type="text" name="checkIn" id="datepicker" value="" class="calendar"><i class="fas fa-calendar-check icon"></i>
+									<input placeholder="17/4/2022" type="text" name="checkIn" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
 								</div>
 								<div class="form-group">
 									<label>ملف التصريح</label>
@@ -314,7 +314,7 @@
 								</div>
 								<div class="form-group">
 									<label> تاريخ انتهاء ملف التصريح </label>
-									<input placeholder="17/4/2022" type="text" name="checkIn" id="datepicker" value="" class="calendar"><i class="fas fa-calendar-check icon"></i>
+									<input placeholder="17/4/2022" type="text" name="checkIn" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login back-final"><i class="fa fa-arrow-right"></i> الخطوة السابقة </button>
@@ -348,28 +348,28 @@
 	<!-- ============================================================== -->
 	<!-- All Jquery -->
 	<!-- ============================================================== -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/select2.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/ion.rangeSlider.min.js"></script>
-	<script src="assets/js/counterup.min.js"></script>
-	<script src="assets/js/materialize.min.js"></script>
-	<script src="assets/js/metisMenu.min.js"></script>
+	<script src="{{ URL::to('src/js/jquery.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/popper.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/bootstrap.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/select2.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/owl.carousel.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/ion.rangeSlider.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/counterup.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/materialize.min.js') }}"></script>
+	<script src="{{ URL::to('src/js/metisMenu.min.js') }}"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
-			jQuery('#datepicker').datepicker({
-		format: 'dd-mm-yyyy',
+			jQuery('.datepicker').datepicker({
+		dateFormat: 'yy-mm-dd',
 		startDate: '+1d',
 		dayNames: [ "الجمعة", "السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس" ] ,
 		dayNamesMin: [ "ج", "س", "أح", "اث", "ث", "ار", "خ" ],
 		isRTL: true,
-		monthNames: [ "كانون الثاني", "شباط", "اذار", "نيسان", "أيار", "حزيران", "تموز", "آب", "أيلول", "تشرين الأول", "تشرين الثاني", "كانون الأول" ]
+		monthNames: [ "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر" ]
 
 	});
 	</script>
-	<script src="assets/js/custom.js"></script>
+	<script src="{{ URL::to('src/js/custom.js') }}"></script>
 	<!-- ============================================================== -->
 	<!-- This page plugins -->
 	<!-- ============================================================== -->

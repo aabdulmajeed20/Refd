@@ -1,79 +1,17 @@
-<!DOCTYPE html>
-<html lang="ar">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		
-        <title>منصة رِفد - منصة خيرية موثوقة</title>
-		
-        <!-- All Plugins Css -->
-        <link href="{{ URL::to('src/css/plugins.css') }}" rel="stylesheet">
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <!-- Custom CSS -->
-        <link href="{{ URL::to('src/css/styles.css') }}" rel="stylesheet">
-		<link href="{{ URL::to('src/css/rtl.css') }}" rel="stylesheet">
-    </head>
+@extends('Home.layout')
+@section('navigation')
+	@include('Home.Common.navigation')
+@endsection
+
+@section('content')
 	
-    <body class="blue-skin">
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="Loader"></div>
+
 		
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <div id="main-wrapper">
-		
-            <!-- ============================================================== -->
-            <!-- Top header  -->
-            <!-- ============================================================== -->
+            
             <!-- Start Navigation -->
-			<div class="header header-transparent dark-text">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<nav id="navigation" class="navigation navigation-landscape">
-								<div class="nav-header">
-									<a class="nav-brand" href="#">
-										<img src="{{URL::to('src/img/logo.png')}}" class="logo" alt="" />
-									</a>
-									<div class="nav-toggle"></div>
-								</div>
-								<div class="nav-menus-wrapper">
-									<ul class="nav-menu">
-									
-										<li class="active"><a href="#">الرئيسية</a></li>
-										<li><a href="#about">عن المنصة</a></li>
-										<li><a href="#process">آلية العمل </a></li>
-										<li><a href="#stat">الاحصائيات </a></li>
-										<li><a href="#projects">المشاريع </a></li>
-										<li><a href="#contact">تواصل معنا </a></li>						
-									</ul>
-									
-									<ul class="nav-menu nav-menu-social align-to-right">
-										
-										<li>
-											<a href="signup.html" >
-												سجل الآن
-											</a>
-										</li>
-										<li class="add-listing dark-bg">
-											<a href="login.html" >
-												 <i class="ti-user mr-1"></i> تسجيل الدخول
-											</a>
-										</li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
+			
+			
 			<!-- End Navigation -->
-			<div class="clearfix"></div>
 			<!-- ============================================================== -->
 			<!-- Top header  -->
 			<!-- ============================================================== -->
@@ -377,145 +315,7 @@
 			<!-- ============================ News Updates End ==================================== -->
 			
 			<!-- ============================ Call To Action Start ================================== -->
-			<section class="call-to-act" id= " contact"style="background:#2944c1 url({{URL::to('src/img/landing-bg.png')}}) no-repeat">
-				<div class="container">
-					<div class="row justify-content-center">
-					
-						<div class="col-lg-7 col-md-8">
-							<div class="clt-caption text-center mb-4">
-								<h3 class="text-light">النشرة الاخبارية</h3>
-								<p class="text-light">اشترك في نشرتنا الاخبارية لتصلك أحدث الاحصائيات عن مشاريعنا</p>
-							</div>
-							<div class="inner-flexible-box subscribe-box">
-								<div class="input-group">
-									<input type="text" class="form-control large" placeholder="بريدك الالكتروني">
-									<button class="btn btn-subscribe bg-dark" type="button"><i class="fa fa-arrow-left"></i></button>
-								</div>
-							</div>
-						</div>				
-					</div>
-				</div>
-			</section>
+			@include('Home.Common.subscribe-news')
+			@include('Home.Common.footer')
+@endsection
 			<!-- ============================ Call To Action End ================================== -->
-			
-			<!-- =========================== Footer Start ========================================= -->
-			<footer class="dark-footer skin-dark-footer">
-				<div>
-					<div class="container">
-						<div class="row">
-	
-							<div class="col-lg-4 col-md-6">
-								<div class="footer-widget">
-									<img src="{{URL::to('src/img/logo.png')}}" class="img-fluid f-logo" width="120" alt="">
-									<p>منصة إجتماعية موثوقة <br>السعودية,الرياض</p>
-									<ul class="footer-bottom-social">
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter"></i></a></li>
-										<li><a href="#"><i class="ti-instagram"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">روابط ذات صلة</h4>
-									<ul class="footer-menu">
-										<li><a href="#">من نحن</a></li>
-										<li><a href="#">الأسئلة الشائعة</a></li>
-										<li><a href="#">مشروعك</a></li>
-										<li><a href="#">تسجيل الدخول</a></li>
-									</ul>
-								</div>
-							</div>
-	
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">تصنيفات المشاريع</h4>
-									<ul class="footer-menu">
-										<li><a href="#">صحة</a></li>
-										<li><a href="#">تعليم</a></li>
-										<li><a href="#">زواج</a></li>
-										<li><a href="#">آبار</a></li>
-									</ul>
-								</div>
-							</div>
-	
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">الجمعيات</h4>
-									<ul class="footer-menu">
-										<li><a href="#">من نحن</a></li>
-										<li><a href="#">المشاريع</a></li>
-										<li><a href="#">أحدث أخبارنا</a></li>
-										<li><a href="#">تواصل معنا</a></li>
-									</ul>
-								</div>
-							</div>
-	
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">التواصل</h4>
-									<ul class="footer-menu">
-										<li><a href="#">دعم</a></li>
-										<li><a href="#">اعرض مشروعك</a></li>
-										<li><a href="#">الاحكام &amp; السياسات</a></li>
-									</ul>
-								</div>
-							</div>
-	
-						</div>
-					</div>
-				</div>
-	
-				<div class="footer-bottom">
-					<div class="container">
-						<div class="row align-items-center">
-	
-							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">جميع الحقوق محفوظة لدى <a href="{{URL::to('/')}}">رِفد</a> © 2021 </p>
-							</div>
-	
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- =========================== Footer End ========================================= -->
-		</div>
-		<!-- ============================================================== -->
-		<!-- End Wrapper -->
-		<!-- ============================================================== -->
-
-		<!-- ============================================================== -->
-		<!-- All Jquery -->
-		<!-- ============================================================== -->
-		<script src="{{ URL::to('src/js/jquery.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/popper.min.js') }}"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-		<script src="{{ URL::to('src/js/bootstrap.min.js') }}"></script>
-		
-		<script>
-				$('.js-tilt').tilt({
-				scale: .8,
-				speed: 1100
-			});
-		</script>
-		
-		<script src="{{ URL::to('src/js/select2.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/owl.carousel.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/ion.rangeSlider.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/counterup.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/materialize.min.js') }}"></script>
-		<script src="{{ URL::to('src/js/metisMenu.min.js') }}"></script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script>
-		  AOS.init();
-		</script>
-	  	<script src="{{ URL::to('src/js/custom.js') }}"></script>
-		
-		<!-- ============================================================== -->
-		<!-- This page plugins -->
-		<!-- ============================================================== -->
-
-		
-	</body>
-</html>
