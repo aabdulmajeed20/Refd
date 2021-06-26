@@ -1,4 +1,5 @@
 @extends('Home.layout')
+
 @section('navigation')
 	@include('Home.Common.navigation')
 @endsection
