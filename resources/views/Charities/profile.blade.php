@@ -1,115 +1,41 @@
-<!DOCTYPE html>
-<html lang="ar">
+@extends('Home.layout')
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+@push('custom_css')
+<style>
+	._dashboard__header_flex{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.status{
+		display: flex;
+		align-items: center;
+	}
+	.status p{
+		padding: 0px 3px;
 
-	<title>منصة رِفد - منصة خيرية موثوقة</title>
+	}
+	.status i{
+		color:#197de4;
+		font-size: 18px;
+	}
+	.bold{
+		font-weight: 500;
+		color:#197de4;
+	}
+	h6{
+		font-weight: 400;
+	}
+	.completed_projects_thumb {
+		max-height: 400px;
+		overflow: hidden;
+	}
+</style>
+@endpush
 
-	<!-- All Plugins Css -->
-	<link href="assets/css/plugins.css" rel="stylesheet">
+@section('content')
+	
 
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-	<!-- Custom CSS -->
-	<link href="assets/css/styles.css" rel="stylesheet">
-	<link href="assets/css/rtl.css" rel="stylesheet">
-	<style>
-		._dashboard__header_flex{
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-		}
-		.status{
-			display: flex;
-			align-items: center;
-		}
-		.status p{
-			padding: 0px 3px;
-
-		}
-		.status i{
-			color:#197de4;
-			font-size: 18px;
-		}
-		.bold{
-			font-weight: 500;
-			color:#197de4;
-		}
-		h6{
-			font-weight: 400;
-		}
-		.completed_projects_thumb {
-			max-height: 400px;
-			overflow: hidden;
-		}
-	</style>
-</head>
-
-<body class="blue-skin">
-	<!-- ============================================================== -->
-	<!-- Preloader - style you can find in spinners.css -->
-	<!-- ============================================================== -->
-	<div class="Loader"></div>
-
-	<!-- ============================================================== -->
-	<!-- Main wrapper - style you can find in pages.scss -->
-	<!-- ============================================================== -->
-	<div id="main-wrapper">
-
-		<!-- ============================================================== -->
-		<!-- Top header  -->
-		<!-- ============================================================== -->
-		<!-- Start Navigation -->
-		<div class="header header-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<nav id="navigation" class="navigation navigation-landscape">
-							<div class="nav-header">
-								<a class="nav-brand" href="#">
-									<img src="{{URL::to('src/img/logo.png')}}" class="logo" alt="" />
-								</a>
-								<div class="nav-toggle"></div>
-							</div>
-							<div class="nav-menus-wrapper">
-								<ul class="nav-menu">
-
-									<li class="active"><a href="#">الرئيسية</a></li>
-									<li><a href="#about">عن المنصة</a></li>
-									<li><a href="#process">آلية العمل </a></li>
-									<li><a href="#stat">الاحصائيات </a></li>
-									<li><a href="#projects">المشاريع </a></li>
-									<li><a href="#contact">تواصل معنا </a></li>
-								</ul>
-
-								<ul class="nav-menu nav-menu-social align-to-right">
-
-									<li>
-										<a href="signup.html">
-											سجل الآن
-										</a>
-									</li>
-									<li class="add-listing dark-bg">
-										<a href="login.html">
-											<i class="ti-user mr-1"></i> تسجيل الدخول
-										</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Navigation -->
-		<div class="clearfix"></div>
-		<!-- ============================================================== -->
-		<!-- Top header  -->
-		<!-- ============================================================== -->
 
 		<!-- ============================ Page Title Start================================== -->
 		<div class="page-title bg-cover"
@@ -132,7 +58,7 @@
 
 							<div class="d-user-avater">
 								<img src="https://linkconnects.com/uploads/user_images/e2202d6d84cac089c7a803e90f3d76a9.png" class="img-fluid rounded" alt="">
-								<h4>جمعية الرحمة</h4>
+								<h4>{{$charity->name}}</h4>
 								<span>المملكة العربية السعودية</span>
 							</div>
 
@@ -141,7 +67,7 @@
 									<li><a href="my-profile.html">ملف الجمعية <i class="ti-user"></i></a></li>
 									<li><a href="messages.html">الرسائل <i class="ti-email"></i></a></li>
 									<li><a href="search-services-list.html">المشاريع  <i class="ti-layout-cta-btn-right"></i></a></li>
-									<li><a href="#">تسجيل الخروج <i class="ti-power-off"></i> </a></li>
+									<li><a href="{{route('charity.logout')}}">تسجيل الخروج <i class="ti-power-off"></i> </a></li>
 								</ul>
 							</div>
 
@@ -542,7 +468,4 @@
 
 		});
 	</script>
-
-</body>
-
-</html>
+@endsection

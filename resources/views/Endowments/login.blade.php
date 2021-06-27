@@ -8,7 +8,7 @@
 						<img src="{{URL::to('src/img/logo.png')}}" class="logo" alt="" />
 					</a>
 					<div class="login-form">
-						<form action="{{route('auth.charityLogin')}}" method="post">
+						<form action="{{route('auth.endowmentLogin')}}" method="post">
 							@csrf
 							<div class="form-group">
 								<label>اسم المستخدم</label>

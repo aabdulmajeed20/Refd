@@ -14,6 +14,7 @@
         <!-- Custom CSS -->
         <link href="{{ URL::to('src/css/styles.css') }}" rel="stylesheet">
 		<link href="{{ URL::to('src/css/rtl.css') }}" rel="stylesheet">
+        @stack('custom_css')
     </head>
 	
     <body class="blue-skin">

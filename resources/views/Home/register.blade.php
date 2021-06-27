@@ -53,7 +53,7 @@
 	<div id="main-wrapper">
 		<div class="header  dark-text">
 			<div class="container">
-				<div class="row">
+				{{-- <div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<nav id="navigation" class="navigation navigation-landscape">
 							<div class="nav-header">
@@ -89,7 +89,7 @@
 							</div>
 						</nav>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 		<!-- End Navigation -->
@@ -109,6 +109,7 @@
 					
 					<div class="signup-form waqef">
 						<form class="wqef">
+							@csrf
 							<div class="first-step-w ">
 								<div class="form-group">
 									<label>البريد الالكتروني</label>
@@ -212,20 +213,21 @@
 						</form>
 					</div>
 					<div class="signup-form charity hide" >
-						<form class="charity">
+						<form action="{{route('auth.charityRegister')}}" method="post" accept-charset="UTF-8" enctype="multipart/form-data" class="charity">
+							@csrf
 							<div class="step first-step">
 								<div class="form-group">
 									<label>البريد الالكتروني</label>
-									<input type="text" class="form-control" placeholder="mail@gmail.com">
+									<input name="email" type="text" class="form-control" placeholder="mail@domain.com">
 								</div>
 	
 								<div class="form-group">
 									<label>كلمة المرور</label>
-									<input type="password" class="form-control" placeholder="*******">
+									<input type="password" class="form-control" placeholder="*******" name="password">
 								</div>
 								<div class="form-group">
 									<label>تأكيد كلمة المرور</label>
-									<input type="password" class="form-control" placeholder="*******">
+									<input type="password" class="form-control" placeholder="*******" name="re-password">
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login next-second"> الخطوة التالية <i class="fa fa-arrow-left"></i></button>
@@ -233,15 +235,16 @@
 							</div>
 							<div class="step hide second-step">
 								<div class="form-group">
-									<label>رقم الجهة </label>
-									<input type="number" class="form-control" placeholder="رقم الجهو">
+									<label>اسم الجمعية الخيرية </label>
+									<input type="text" class="form-control" placeholder="اسم الجمعية الخيرية" name="charity_name">
 								</div>
+								
 								<div class="row">
 									<div class="col-md-6">
 										<label> <strong>المنطقة</strong> </label>
 									<div class="form-group  with-light">
 										
-										<select class="form-control ">
+										<select class="form-control " name="region">
 											<option value="0">الرياض</option>
 											<option value="1">جدة</option>
 											<option value="2">مكة</option>
@@ -254,7 +257,7 @@
 										<label> <strong>المدينة</strong> </label>
 									<div class="form-group  with-light">
 										
-										<select  class="form-control ">
+										<select  class="form-control " name="city">
 											<option value="0">الرياض</option>
 											<option value="1">جدة</option>
 											<option value="2">مكة</option>
@@ -267,12 +270,16 @@
 								</div>
 								<label> <strong>تصنيف الجهة</strong> </label>
 								<div class="form-group with-light">
-									<select  class="form-control ">
-										<option value="0">حكومية</option>
-										<option value="1">خيرية</option>
-										<option value="2">تجارية</option>
-										<option value="3">غير ربحية</option>
+									<select  class="form-control " name="category">
+										<option value="حكومية">حكومية</option>
+										<option value="خيرية">خيرية</option>
+										<option value="تجارية">تجارية</option>
+										<option value="غير ربحية">غير ربحية</option>
 									</select>
+								</div>
+								<div class="form-group">
+									<label>رقم التواصل </label>
+									<input type="text" class="form-control" placeholder="05XXXXXXXX" name="contact_number">
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login back-first"><i class="fa fa-arrow-right"></i> الخطوة السابقة </button>
@@ -285,8 +292,7 @@
 									<div class="_file_caption">
 										<div class="_file_caption_flex">
 											<div class="_eltio_caption_body small">
-												<h4>file.pdf</h4>
-												<span>PDF</span>
+												<input type="file" name="management_file">
 											</div>
 										</div>
 										<div class="_file_caption_right">
@@ -296,15 +302,14 @@
 								</div>
 								<div class="form-group">
 									<label> تاريخ انتهاء مجلس الادارة </label>
-									<input placeholder="17/4/2022" type="text" name="checkIn" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
+									<input placeholder="17/4/2022" type="text" name="management_date" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
 								</div>
 								<div class="form-group">
 									<label>ملف التصريح</label>
 									<div class="_file_caption">
 										<div class="_file_caption_flex">
 											<div class="_eltio_caption_body small">
-												<h4>file.pdf</h4>
-												<span>PDF</span>
+												<input type="file" name="permission_file">
 											</div>
 										</div>
 										<div class="_file_caption_right">
@@ -314,7 +319,7 @@
 								</div>
 								<div class="form-group">
 									<label> تاريخ انتهاء ملف التصريح </label>
-									<input placeholder="17/4/2022" type="text" name="checkIn" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
+									<input placeholder="17/4/2022" type="text" name="permission_date" id="" value="" class="calendar datepicker"><i class="fas fa-calendar-check icon"></i>
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login back-final"><i class="fa fa-arrow-right"></i> الخطوة السابقة </button>

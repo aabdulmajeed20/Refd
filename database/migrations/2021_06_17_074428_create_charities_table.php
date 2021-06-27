@@ -21,7 +21,7 @@ class CreateCharitiesTable extends Migration
             $table->string('password');
             $table->bigInteger('address_id')->unsigned();
             $table->integer('status')->default(1);
-            $table->integer('category');
+            $table->string('category');
             $table->rememberToken();
             $table->timestamps();
         });

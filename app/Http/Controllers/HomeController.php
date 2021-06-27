@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function showLogin()
     {
-        return view('Home.login');
+        return view('Endowments.login');
     }
 
     public function showRegister()

@@ -27,7 +27,7 @@ class RedirectIfAuthenticated
 
             case 'charity':
                 if (Auth::guard($guard)->check()) {
-                    return redirect()->route('charity.dashboard');
+                    return redirect()->route('charity.profile');
                 }
                 break;
             

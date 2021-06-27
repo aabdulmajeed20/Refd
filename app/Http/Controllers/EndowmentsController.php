@@ -82,4 +82,9 @@ class EndwomentsController extends Controller
     {
         //
     }
+
+    public function showLogin()
+    {
+        return view('Endowment.login');
+    }
 }

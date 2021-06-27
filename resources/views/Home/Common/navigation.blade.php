@@ -27,9 +27,14 @@
                                     سجل الآن
                                 </a>
                             </li>
+                            <li class="add-listing dark-bg light">
+                                <a href="{{route('endowment.showLogin')}}" >
+                                     <i class="ti-user mr-1"></i> دخول الأوقاف
+                                </a>
+                            </li>
                             <li class="add-listing dark-bg">
-                                <a href="{{route('showLogin')}}" >
-                                     <i class="ti-user mr-1"></i> تسجيل الدخول
+                                <a href="{{route('charity.showLogin')}}" >
+                                     <i class="ti-user mr-1"></i> دخول الجمعيات
                                 </a>
                             </li>
                         </ul>

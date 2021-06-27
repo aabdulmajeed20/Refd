@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Charity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CharitiesController extends Controller
 {
@@ -81,5 +82,22 @@ class CharitiesController extends Controller
     public function destroy(Charity $charity)
     {
         //
+    }
+
+    public function profile()
+    {
+        $charity = Charity::find(Auth::guard('charity')->id());
+        return view('Charities.profile', compact('charity'))->render();
+    }
+
+    public function showLogin()
+    {
+        return view('Charity.login');
+    }
+
+    public function logout()
+    {
+        Auth::guard('charity')->logout();
+        return redirect('/');
     }
 }

@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'charity' => [
+            'driver' => 'session',
+            'provider' => 'charities',
+        ],
+        'endowment' => [
+            'driver' => 'session',
+            'provider' => 'endowments',
+        ],
 
         'api' => [
             'driver' => 'token',
@@ -69,6 +77,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'charities' => [
+            'driver' => 'eloquent',
+            'model' => App\Charity::class,
+        ],
+        'endowments' => [
+            'driver' => 'eloquent',
+            'model' => App\Endowment::class,
         ],
 
         // 'users' => [
