@@ -108,7 +108,7 @@
 						</ul>
 					
 					<div class="signup-form waqef">
-						<form class="wqef">
+						<form action="{{route('auth.endowmentRegister')}}" method="post" accept-charset="UTF-8" enctype="multipart/form-data" class="wqef">
 							@csrf
 							<div class="first-step-w ">
 								<div class="form-group">
@@ -166,7 +166,7 @@
 								
 								<div class="form-group">
 									<label>رقم الجهة</label>
-									<input type="text" class="form-control" placeholder="اسم الوقف">
+									<input type="text" class="form-control" placeholder="رقم الوقف">
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login back-first-w"><i class="fa fa-arrow-right"></i> الخطوة السابقة </button>

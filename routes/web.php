@@ -61,6 +61,10 @@ Route::prefix('Endowment')->name('endowment.')->group(function() {
         'uses' => 'HomeController@showLogin',
         'as' => 'showLogin'
     ]);
+    Route::get('dashboard', [
+        'uses' => 'EndowmentsController@dashboard',
+        'as' => 'dashboard'
+    ]);
     Route::get('profile', [
         'uses' => 'EndowmentsController@profile',
         'as' => 'profile'
