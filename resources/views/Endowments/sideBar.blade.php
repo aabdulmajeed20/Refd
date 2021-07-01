@@ -13,32 +13,21 @@
                 <li class="active"><a href="dashboard.html">لوحة التحكم <i
                             class="ti-dashboard"></i></a></li>
                 <li><a href="my-profile.html">الملف الشخصي <i class="ti-user"></i></a></li>
-                <li><a href="messages.html">الرسائل <i class="ti-email"></i></a></li>
+                <li><a href="{{route('endowment.messages')}}">الرسائل <i class="ti-email"></i></a></li>
                 <li>
-                    <a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المحفوظات
-                        <i class="ti-bookmark-alt"></i></a>
-                    <ul>
-                        <li><a href="bookmark-jobs.html">المحفوظات</a></li>
-                        <li><a href="bookmark-candidates.html">Bookmark Candidates</a></li>
-                        <li><a href="bookmark-freelancers.html">Bookmark Freelancers</a></li>
-                        <li><a href="bookmark-employers.html">Bookmark Employers</a></li>
-                    </ul>
+                    <a href="{{route('endowment.bookmarks')}}" aria-expanded="false">المحفوظات <i class="ti-bookmark-alt"></i></a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المشاريع
                         <i class="fa fa-briefcase"></i></a>
                     <ul>
-                        <li><a href="manage-jobs.html">Manage Jobs</a></li>
-                        <li><a href="manage-candidates.html">Manage Candidates</a></li>
-                        <li><a href="manage-freelancers.html">Manage Freelancers</a></li>
-                        <li><a href="manage-employers.html">Manage Employers</a></li>
-                        <li><a href="create-reume.html">Create Resume</a></li>
-                        <li><a href="post-job.html">Post A Job</a></li>
+                        <li><a href="{{route('endowment.selectedProjects')}}">المشاريع المختارة</a></li>
+                        <li><a href="{{route('endowment.inProgressProjects')}}">المشاريع قيد الدعم</a></li>
+                        <li><a href="{{route('endowment.donatedProjects')}}">المشاريع المدعومة</a></li>
                     </ul>
                 </li>
-                <li><a href="#">تسجيل الخروج<i class="ti-power-off"></i></a></li>
+                <li><a href="{{route('endowment.logout')}}">تسجيل الخروج<i class="ti-power-off"></i></a></li>
             </ul>
         </div>
-
     </div>
 </div>

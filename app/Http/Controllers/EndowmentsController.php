@@ -94,4 +94,34 @@ class EndowmentsController extends Controller
         $endowment = Endowment::find(Auth::guard('endowment')->id());
         return view('Endowments.dashboard', compact('endowment'))->render();
     }
+    public function profile()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.profile', compact('endowment'))->render();
+    }
+    public function messages()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.messages', compact('endowment'))->render();
+    }
+    public function bookmarks()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.bookmarks', compact('endowment'))->render();
+    }
+    public function selectedProjects()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.selectedProjects', compact('endowment'))->render();
+    }
+    public function inProgressProjects()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.inProgressProjects', compact('endowment'))->render();
+    }
+    public function donatedProjects()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.donatedProjects', compact('endowment'))->render();
+    }
 }

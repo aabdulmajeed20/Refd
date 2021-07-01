@@ -50,7 +50,7 @@ Route::prefix('Charity')->name('charity.')->group(function() {
         'uses' => 'CharitiesController@profile',
         'as' => 'profile'
     ]);
-    Route::get('charLogout', [
+    Route::get('logout', [
         'uses' => 'CharitiesController@logout',
         'as' => 'logout'
     ]);
@@ -69,7 +69,27 @@ Route::prefix('Endowment')->name('endowment.')->group(function() {
         'uses' => 'EndowmentsController@profile',
         'as' => 'profile'
     ]);
-    Route::get('charLogout', [
+    Route::get('messages', [
+        'uses' => 'EndowmentsController@messages',
+        'as' => 'messages'
+    ]);
+    Route::get('bookmarks', [
+        'uses' => 'EndowmentsController@bookmarks',
+        'as' => 'bookmarks'
+    ]);
+    Route::get('selectedProjects', [
+        'uses' => 'EndowmentsController@selectedProjects',
+        'as' => 'selectedProjects'
+    ]);
+    Route::get('inProgressProjects', [
+        'uses' => 'EndowmentsController@inProgressProjects',
+        'as' => 'inProgressProjects'
+    ]);
+    Route::get('donatedProjects', [
+        'uses' => 'EndowmentsController@donatedProjects',
+        'as' => 'donatedProjects'
+    ]);
+    Route::get('logout', [
         'uses' => 'EndowmentsController@logout',
         'as' => 'logout'
     ]);

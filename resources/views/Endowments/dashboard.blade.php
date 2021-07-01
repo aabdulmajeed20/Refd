@@ -83,66 +83,10 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-6 col-md-12">
-			<div class="dashboard-gravity-list with-icons">
-				<h4>أنشطة حديثة</h4>
-				<ul>
-					<li>
-						<i class="dash-icon-box ti-layers text-purple bg-light-purple"></i>مؤسسة
-						نماء<strong><a href="#">تطلب دعم مشروع كفالة أيتام</a></strong> رجاء
-						الموافقة!
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-star text-success bg-light-success"></i>قيم محمد
-						أحمد <div class="numerical-rating high" data-rating="5.0">
-						</div> مشروع اولادنا<strong><a href="#"> ودون ملاحظته</a></strong>
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-heart text-warning bg-light-warning"></i>اعتمد 10
-						من اللجنة<strong><a href="#">مشروع بناء</a></strong> يتبقى 5 من اللجنة!
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-star text-info bg-light-info"></i> قيم زيد
-						العبدالله
-						مشروع المساجد <div class="numerical-rating mid" data-rating="4.8"></div>
-						<strong><a href="#">ودون ملاحظاته</a></strong>
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-layers text-purple bg-light-purple"></i>مؤسسة
-						نماء<strong><a href="#">تطلب دعم مشروع كفالة أيتام</a></strong> رجاء
-						الموافقة!
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-star text-success bg-light-success"></i>قيم محمد
-						أحمد <div class="numerical-rating high" data-rating="5.0">
-						</div> مشروع اولادنا<strong><a href="#"> ودون ملاحظته</a></strong>
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-
-					<li>
-						<i class="dash-icon-box ti-heart text-warning bg-light-warning"></i>اعتمد 10
-						من اللجنة<strong><a href="#">مشروع بناء</a></strong> يتبقى 5 من اللجنة!
-						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="col-lg-6 col-md-12">
+		<div class="col-lg-12 col-md-12">
 			<div class="dashboard-gravity-list invoices with-icons">
 				<h4>فواتير</h4>
 				<ul>
-
 					<li><i class="dash-icon-box ti-files text-warning bg-light-warning"></i>
 						<strong>مشروع نماء</strong>
 						<ul>
@@ -215,6 +159,60 @@
 						</div>
 					</li>
 
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-12 col-md-12">
+			<div class="dashboard-gravity-list with-icons">
+				<h4>أنشطة حديثة</h4>
+				<ul>
+					<li>
+						<i class="dash-icon-box ti-layers text-purple bg-light-purple"></i>مؤسسة
+						نماء<strong><a href="#">تطلب دعم مشروع كفالة أيتام</a></strong> رجاء
+						الموافقة!
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-star text-success bg-light-success"></i>قيم محمد
+						أحمد <div class="numerical-rating high" data-rating="5.0">
+						</div> مشروع اولادنا<strong><a href="#"> ودون ملاحظته</a></strong>
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-heart text-warning bg-light-warning"></i>اعتمد 10
+						من اللجنة<strong><a href="#">مشروع بناء</a></strong> يتبقى 5 من اللجنة!
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-star text-info bg-light-info"></i> قيم زيد
+						العبدالله
+						مشروع المساجد <div class="numerical-rating mid" data-rating="4.8"></div>
+						<strong><a href="#">ودون ملاحظاته</a></strong>
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-layers text-purple bg-light-purple"></i>مؤسسة
+						نماء<strong><a href="#">تطلب دعم مشروع كفالة أيتام</a></strong> رجاء
+						الموافقة!
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-star text-success bg-light-success"></i>قيم محمد
+						أحمد <div class="numerical-rating high" data-rating="5.0">
+						</div> مشروع اولادنا<strong><a href="#"> ودون ملاحظته</a></strong>
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
+
+					<li>
+						<i class="dash-icon-box ti-heart text-warning bg-light-warning"></i>اعتمد 10
+						من اللجنة<strong><a href="#">مشروع بناء</a></strong> يتبقى 5 من اللجنة!
+						<a href="#" class="close-list-item"><i class="fa fa-close"></i></a>
+					</li>
 				</ul>
 			</div>
 		</div>
