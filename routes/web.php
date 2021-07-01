@@ -89,6 +89,10 @@ Route::prefix('Endowment')->name('endowment.')->group(function() {
         'uses' => 'EndowmentsController@donatedProjects',
         'as' => 'donatedProjects'
     ]);
+    Route::get('alkhair', [
+        'uses' => 'EndowmentsController@alkhair',
+        'as' => 'alkhair'
+    ]);
     Route::get('logout', [
         'uses' => 'EndowmentsController@logout',
         'as' => 'logout'

@@ -15,7 +15,7 @@
 	</div>
 @endsection
 
-@section('mainSection')
+@section('content')
 	<div class="row">
 
 		

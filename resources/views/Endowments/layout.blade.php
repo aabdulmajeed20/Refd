@@ -45,9 +45,9 @@
 								<div class="nav-menus-wrapper">
 									<ul class="nav-menu">
 									
-										<li class="active"><a href="#">الرئيسية<span class="submenu-indicator"></span></a></li>
+										<li class="active"><a href="{{route('endowment.dashboard')}}">الرئيسية<span class="submenu-indicator"></span></a></li>
 										
-										<li><a href="#">ساحة الخير<span class="submenu-indicator"></span></a></li>
+										<li><a href="{{route('endowment.alkhair')}}">ساحة الخير<span class="submenu-indicator"></span></a></li>
 										
 										<li><a href="#">المشاريع المدعومة</a></li>
 										<li><a href="#">الجمعيات </a></li>

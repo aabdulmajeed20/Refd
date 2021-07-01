@@ -124,4 +124,9 @@ class EndowmentsController extends Controller
         $endowment = Endowment::find(Auth::guard('endowment')->id());
         return view('Endowments.donatedProjects', compact('endowment'))->render();
     }
+    public function alkhair()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.alkhair', compact('endowment'))->render();
+    }
 }
