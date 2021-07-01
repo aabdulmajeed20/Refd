@@ -1,8 +1,8 @@
-@extends('Home.layout')
+@extends('Endowments.layout')
 
 @section('pageTitle')
 	<div class="page-title bg-cover"
-	style="background:url(https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=925&q=80)no-repeat;"
+	style="background:url({{URL::to('src/img/Header1.jpg')}})no-repeat;"
 	data-overlay="5">
 	<div class="container">
 		<div class="row">
@@ -13,62 +13,8 @@
 @endsection
 
 @section('content')
-<div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
-	<div class="dashboard-navbar overlio-top">
+@include('Endowments.sideBar', ['endowment' => $endowment])
 
-		<div class="d-user-avater">
-			<img src="https://themezhub.net/workoo-demo/workoo/assets/img/team-1.jpg"
-				class="img-fluid rounded" alt="">
-			<h4>عبد العزيز الأحمد</h4>
-			<span>المملكة العربية السعودية</span>
-		</div>
-
-		<div class="d-navigation">
-			<ul id="metismenu">
-				<li class="active"><a href="dashboard.html">لوحة التحكم <i
-							class="ti-dashboard"></i></a></li>
-				<li><a href="my-profile.html">الملف الشخصي <i class="ti-user"></i></a></li>
-				<li><a href="messages.html">الرسائل <i class="ti-email"></i></a></li>
-				<li>
-					<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المحفوظات
-						<i class="ti-bookmark-alt"></i></a>
-					<ul>
-						<li><a href="bookmark-jobs.html">المحفوظات</a></li>
-						<li><a href="bookmark-candidates.html">Bookmark Candidates</a></li>
-						<li><a href="bookmark-freelancers.html">Bookmark Freelancers</a></li>
-						<li><a href="bookmark-employers.html">Bookmark Employers</a></li>
-					</ul>
-				</li>
-				<li><a href="reviews.html">المراجعات <i class="fa fa-star"></i></a></li>
-				<li>
-					<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المشاريع
-						<i class="fa fa-briefcase"></i></a>
-					<ul>
-						<li><a href="manage-jobs.html">Manage Jobs</a></li>
-						<li><a href="manage-candidates.html">Manage Candidates</a></li>
-						<li><a href="manage-freelancers.html">Manage Freelancers</a></li>
-						<li><a href="manage-employers.html">Manage Employers</a></li>
-						<li><a href="create-reume.html">Create Resume</a></li>
-						<li><a href="post-job.html">Post A Job</a></li>
-
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المهام <i
-							class="ti-desktop"></i></a>
-					<ul>
-						<li><a href="manage-task.html">Manage Task</a></li>
-						<li><a href="manage-bidders.html">Manage Bidders</a></li>
-						<li><a href="active-bids.html">My Active Bids</a></li>
-						<li><a href="post-task.html">Post A Task</a></li>
-					</ul>
-				</li>
-				<li><a href="#">تسجيل الخروج<i class="ti-power-off"></i></a></li>
-			</ul>
-		</div>
-
-	</div>
-</div>
 <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12">
