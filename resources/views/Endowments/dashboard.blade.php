@@ -1,4 +1,4 @@
-@extends('Endowments.layout')
+@extends('Home.layout')
 
 @section('pageTitle')
 	<div class="page-title bg-cover"
@@ -12,7 +12,7 @@
 	</div>
 @endsection
 
-@section('mainSection')
+@section('content')
 <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
 	<div class="dashboard-navbar overlio-top">
 

@@ -24,11 +24,11 @@ Route::get('register', [
 
 Route::name('auth.')->namespace('Auth')->group(function() {
     Route::post('endwLogin', [
-        'uses' => 'EndowmnetsController@login',
+        'uses' => 'EndowmentsController@login',
         'as' => 'endowmentLogin'
     ]);
     Route::post('endwRegister', [
-        'uses' => 'EndowmnetsController@register',
+        'uses' => 'EndowmentsController@register',
         'as' => 'endowmentRegister'
     ]);
     Route::post('charLogin', [

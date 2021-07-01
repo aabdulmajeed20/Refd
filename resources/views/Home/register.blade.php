@@ -113,16 +113,16 @@
 							<div class="first-step-w ">
 								<div class="form-group">
 									<label>البريد الالكتروني</label>
-									<input type="text" class="form-control" placeholder="mail@gmail.com">
+									<input type="text" class="form-control" placeholder="mail@gmail.com" name="email">
 								</div>
 	
 								<div class="form-group">
 									<label>كلمة المرور</label>
-									<input type="password" class="form-control" placeholder="*******">
+									<input type="password" class="form-control" placeholder="*******" name="password">
 								</div>
 								<div class="form-group">
 									<label>تأكيد كلمة المرور</label>
-									<input type="password" class="form-control" placeholder="*******">
+									<input type="password" class="form-control" placeholder="*******" name="re-password">
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login next-f-w"> الخطوة التالية <i class="fa fa-arrow-left"></i> </button>
@@ -131,14 +131,14 @@
 							<div class="second-step-w hide">
 								<div class="form-group">
 									<label>اسم الجهة</label>
-									<input type="text" class="form-control" placeholder="اسم الوقف">
+									<input type="text" class="form-control" placeholder="اسم الوقف" name="endowment_name">
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<label> <strong>المنطقة</strong> </label>
 									<div class="form-group  with-light">
 										
-										<select class="form-control ">
+										<select class="form-control " name="region">
 											<option value="0">الرياض</option>
 											<option value="1">جدة</option>
 											<option value="2">مكة</option>
@@ -151,7 +151,7 @@
 										<label> <strong>المدينة</strong> </label>
 									<div class="form-group  with-light">
 										
-										<select  class="form-control ">
+										<select  class="form-control " name="city">
 											<option value="0">الرياض</option>
 											<option value="1">جدة</option>
 											<option value="2">مكة</option>
@@ -165,8 +165,8 @@
 								
 								
 								<div class="form-group">
-									<label>رقم الجهة</label>
-									<input type="text" class="form-control" placeholder="رقم الوقف">
+									<label>رقم التواصل</label>
+									<input type="text" class="form-control" placeholder="05XXXXXXXX" name="contact_number">
 								</div>
 								<div class="form-group space-between">
 									<button class="btn dark-2 btn-md pop-login back-first-w"><i class="fa fa-arrow-right"></i> الخطوة السابقة </button>
@@ -179,23 +179,7 @@
 									<div class="_file_caption">
 										<div class="_file_caption_flex">
 											<div class="_eltio_caption_body small">
-												<h4>file.pdf</h4>
-												<span>PDF</span>
-											</div>
-										</div>
-										<div class="_file_caption_right">
-											<a href="javascript:void(0);"><i class="fa fa-download"></i></a>
-										</div>
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label>صك الوقفية</label>
-									<div class="_file_caption">
-										<div class="_file_caption_flex">
-											<div class="_eltio_caption_body small">
-												<h4>file.pdf</h4>
-												<span>PDF</span>
+												<input type="file" name="licence_file">
 											</div>
 										</div>
 										<div class="_file_caption_right">

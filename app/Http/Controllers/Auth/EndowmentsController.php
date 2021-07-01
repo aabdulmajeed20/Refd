@@ -36,35 +36,21 @@ class EndowmentsController extends Controller
                 $endowment->email = $request->email;
                 $endowment->password = bcrypt($request->password);
                 $endowment->address_id = $address->id;
-                $endowment->category = $request->category;
                 
                 if($endowment->save()){
                     $destinationPath = 'Files/'; // upload path
-                    $fileName = time().'.'.$request->file('management_file')->extension(); // renaming image
+                    $fileName = time().'.'.$request->file('licence_file')->extension(); // renaming image
     
                     $file = new File();
                     $file->target_id = $endowment->id;
-                    $file->file_type = 1;
-                    $file->end_date = $request['management_date'];
-                    $request->file('management_file')->move($destinationPath, $fileName);
+                    $file->file_type = 3;
+                    $request->file('licence_file')->move($destinationPath, $fileName);
                     $file->path = $destinationPath.$fileName;
-                    $file->label = 'مجلس الإدارة';
-                    $file->save();
-
-                    $destinationPath = 'Files/'; // upload path
-                    $fileName = time().'.'.$request->file('permission_file')->extension(); // renaming image
-    
-                    $file = new File();
-                    $file->target_id = $endowment->id;
-                    $file->file_type = 2;
-                    $file->end_date = $request['permission_date'];
-                    $request->file('permission_file')->move($destinationPath, $fileName);
-                    $file->path = $destinationPath.$fileName;
-                    $file->label = 'التصريح';
+                    $file->label = 'رخصة الوقف';
                     $file->save();
 
                     Auth::login($endowment);
-                    return redirect()->route('endowment.profile');
+                    return redirect()->route('endowment.dashboard');
                 }
             }
 

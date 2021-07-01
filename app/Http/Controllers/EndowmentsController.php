@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Endowment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class EndwomentsController extends Controller
+class EndowmentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -86,5 +87,11 @@ class EndwomentsController extends Controller
     public function showLogin()
     {
         return view('Endowment.login');
+    }
+
+    public function dashboard()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.dashboard', compact('endowment'))->render();
     }
 }
