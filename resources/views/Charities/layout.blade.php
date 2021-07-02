@@ -30,47 +30,7 @@
             <!-- ============================================================== -->
             <!-- Top header  -->
             <!-- ============================================================== -->
-            <!-- Start Navigation -->
-			<div class="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<nav id="navigation" class="navigation navigation-landscape">
-								<div class="nav-header">
-									<a class="nav-brand" href="#">
-										<img src="{{URL::to('src/img/logo.png')}}" class="logo" alt="" />
-									</a>
-									<div class="nav-toggle"></div>
-								</div>
-								<div class="nav-menus-wrapper">
-									<ul class="nav-menu">
-									
-										<li class="active"><a href="{{route('endowment.dashboard')}}">الرئيسية<span class="submenu-indicator"></span></a></li>
-										
-										<li><a href="{{route('endowment.alkhair')}}">ساحة الخير<span class="submenu-indicator"></span></a></li>
-										<li><a href="#">الجمعيات </a></li>
-										
-										<!-- <li><a href="#">Pages<span class="submenu-indicator"></span></a>
-											<ul class="nav-dropdown nav-submenu">
-												<li><a href="about-us.html">About Us</a></li> 
-												<li><a href="blog.html">Blogs Page</a></li>                                    
-												<li><a href="blog-detail.html">Blog Detail</a></li>                                     
-												<li><a href="pricing.html">Pricing</a></li>
-												<li><a href="contact.html">Contact Us</a></li>
-												<li><a href="components.html">Components</a></li>												
-												<li><a href="faq.html">FAQ's</a></li>
-												<li><a href="checkout.html">CheckOut</a></li>
-											</ul>
-										</li> -->
-										
-									</ul>
-								</div>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Navigation -->
+    
 		<div class="clearfix"></div>
 		<!-- ============================================================== -->
 		<!-- Top header  -->

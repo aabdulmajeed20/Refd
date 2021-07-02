@@ -85,7 +85,7 @@
 					
 						<div class="col-lg-7 col-md-6">
 							<div class="_setup_process">
-								<h2> آلية عمل <span class="theme-cl-2">منصة رِفد</span></h2>
+								<h2> آلية عمل <span class="text-info">منصة رِفد</span></h2>
 								<p>تجربة المستخدم وسلاسة الإجراءات هي من ركائز عمل المنصة، تبدأ بخطوات يسيرة خلال عملية التسجيل سواء للجمعية الخيرية أو للجهة الوقفية، ثم التحقق من صحة المعلومات المرفقة في مدة وجيزة، ليتم العمل على الآليات التالية:</p>
 							</div>
 							<div class="row">
@@ -151,7 +151,7 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-7 col-md-9">
 							<div class="sec-heading">
-								<h2>احصائيات منصة<span class="theme-cl-2"> رِفد </span></h2>
+								<h2>احصائيات منصة<span class="text-info"> رِفد </span></h2>
 								<p>تترجم الأرقام التالية بعض الإنجازات التي تمت -بفضل الله- عن طريق المنصة:</p>
 							</div>
 						</div>
@@ -211,7 +211,7 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-7 col-md-9">
 							<div class="sec-heading">
-								<h2>مشاريع  <span class="theme-cl-2">رفد</span></h2>
+								<h2>مشاريع  <span class="text-info">رفد</span></h2>
 								<p>نبذة عن بعض المشاريع التي تم دعمها عن طريق المنصة</p>
 							</div>
 						</div>

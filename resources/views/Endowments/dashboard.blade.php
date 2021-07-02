@@ -35,7 +35,7 @@
 			<div class="dashboard-stat">
 				<div class="dashboard-stat-icon widget-1"><i class="ti-location-pin"></i></div>
 				<div class="dashboard-stat-content">
-					<h4><span class="cto">72</span></h4>
+					<h4><span class="cto">12</span></h4>
 					<p>موقع جغرافي</p>
 				</div>
 			</div>
@@ -45,8 +45,8 @@
 			<div class="dashboard-stat">
 				<div class="dashboard-stat-icon widget-2"><i class="ti-support"></i></div>
 				<div class="dashboard-stat-content">
-					<h4><span class="cto">12</span></h4>
-					<p>مشاريع مدعومة</p>
+					<h4><span class="cto">36</span></h4>
+					<p>إجمالي المشاريع</p>
 				</div>
 			</div>
 		</div>
@@ -54,8 +54,8 @@
 			<div class="dashboard-stat">
 				<div class="dashboard-stat-icon widget-4"><i class="ti-ruler-pencil"></i></div>
 				<div class="dashboard-stat-content">
-					<h4><span class="cto">80</span></h4>
-					<p>مشاريع مدروسة</p>
+					<h4><span class="cto">24</span></h4>
+					<p>الجمعيات المدعومة</p>
 				</div>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 			<div class="dashboard-stat">
 				<div class="dashboard-stat-icon widget-3"><i class="ti-user"></i></div>
 				<div class="dashboard-stat-content">
-					<h4><span class="cto">72</span></h4>
+					<h4><span class="cto">185,000</span></h4>
 					<p>عدد المستفيدين</p>
 				</div>
 			</div>
@@ -88,14 +88,14 @@
 				<h4>حالة المشاريع المختارة</h4>
 				<ul>
 					<li><i class="dash-icon-box ti-files text-warning bg-light-warning"></i>
-						<strong>مشروع نماء</strong>
+						<strong>مشروع بناء مجموعة من المساجد بمناطق تفقر لذلك</strong>
 						<ul>
 							<li class="unpaid">قيد الدعم</li>
 							<li>رقم الطلب: #20551</li>
 							<li>تاريخ الطلب: 01/08/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 
@@ -107,7 +107,7 @@
 							<li>تاريخ الطلب: 01/07/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 
@@ -119,7 +119,7 @@
 							<li>تاريخ الطلب: 01/07/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 
@@ -131,7 +131,7 @@
 							<li>تاريخ الطلب: 01/07/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 
@@ -143,7 +143,7 @@
 							<li>تاريخ الطلب: 01/07/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 
@@ -155,7 +155,7 @@
 							<li>تاريخ الطلب: 01/07/2019</li>
 						</ul>
 						<div class="buttons-to-right">
-							<a href="dashboard-invoice.html" class="button gray">عرض المشروع</a>
+							<a href="#" class="button gray">عرض المشروع</a>
 						</div>
 					</li>
 

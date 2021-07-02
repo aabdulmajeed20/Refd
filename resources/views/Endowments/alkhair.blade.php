@@ -7,7 +7,7 @@
                 <div class="col-lg-12 col-md-12">
 
                     <h2 class="ipt-title">صفحة المشاريع</h2>
-                    <span class="ipn-subtitle">استعراض كل المشارع</span>
+                    <span class="ipn-subtitle">استعراض كل المشاريع</span>
 
                 </div>
             </div>
@@ -66,13 +66,13 @@
 																		<input id="a1" class="checkbox-custom"
 																			name="ADA" type="checkbox" checked="">
 																		<label for="a1"
-																			class="checkbox-custom-label">الفقراء والمساكين </label>
+																			class="checkbox-custom-label">بناء المساجد </label>
 																	</li>
 																	<li>
 																		<input id="a2" class="checkbox-custom"
 																			name="Parking" type="checkbox">
 																		<label for="a2"
-																			class="checkbox-custom-label">بناء المساجد</label>
+																			class="checkbox-custom-label">الفقراء والمساكين</label>
 																	</li>
 																	<li>
 																		<input id="a3" class="checkbox-custom"
@@ -112,7 +112,7 @@
 																<ul class="no-ul-list filter-list">
 																	<li>
 																		<input id="b1" class="checkbox-custom"
-																			name="ADA" type="checkbox" checked="">
+																			name="ADA" type="checkbox">
 																		<label for="b1"
 																			class="checkbox-custom-label">جدة</label>
 																	</li>
@@ -127,68 +127,12 @@
 																			name="Coffee" type="checkbox">
 																		<label for="b3"
 																			class="checkbox-custom-label">مكة</label>
-																		<ul class="no-ul-list filter-list">
-																			<li>
-																				<input id="ac1" class="checkbox-custom"
-																					name="ADA" type="checkbox">
-																				<label for="ac1"
-																					class="checkbox-custom-label">الرياض</label>
-																			</li>
-																			<li>
-																				<input id="ac2" class="checkbox-custom"
-																					name="Parking" type="checkbox">
-																				<label for="ac2"
-																					class="checkbox-custom-label">الدمام</label>
-																			</li>
-																			<li>
-																				<input id="ac3" class="checkbox-custom"
-																					name="Coffee" type="checkbox">
-																				<label for="ac3"
-																					class="checkbox-custom-label">القصيم</label>
-																			</li>
-																		</ul>
 																	</li>
 																	<li>
 																		<input id="b4" class="checkbox-custom"
 																			name="Mother" type="checkbox">
 																		<label for="b4"
-																			class="checkbox-custom-label">جدة</label>
-																		<ul class="no-ul-list filter-list">
-																			<li>
-																				<input id="ad1" class="checkbox-custom"
-																					name="ADA" type="checkbox">
-																				<label for="ad1"
-																					class="checkbox-custom-label">الرياض(20)</label>
-																			</li>
-																			<li>
-																				<input id="ad2" class="checkbox-custom"
-																					name="Parking" type="checkbox">
-																				<label for="ad2"
-																					class="checkbox-custom-label">القصيم
-																					(42)</label>
-																			</li>
-																			<li>
-																				<input id="ad3" class="checkbox-custom"
-																					name="Coffee" type="checkbox">
-																				<label for="ad3"
-																					class="checkbox-custom-label">مكة
-																					(22)</label>
-																			</li>
-																		</ul>
-																	</li>
-																	<li>
-																		<input id="b5" class="checkbox-custom"
-																			name="Outdoor" type="checkbox">
-																		<label for="b5"
-																			class="checkbox-custom-label">المدينة
-																			(15)</label>
-																	</li>
-																	<li>
-																		<input id="b6" class="checkbox-custom"
-																			name="Pet" type="checkbox">
-																		<label for="b6"
-																			class="checkbox-custom-label">الرياض
-																			(09)</label>
+																			class="checkbox-custom-label">بيشة</label>
 																	</li>
 																</ul>
 															</div>
@@ -250,19 +194,19 @@
 														alt=""></a>
 											</div>
 											<div class="_list_110_caption">
-												<h4 class="_jb_title"><a href="job-detail.html">بناء مجموعة من المساجد
+												<h4 class="_jb_title"><a href="{{route('endowment.projectDetails')}}">بناء مجموعة من المساجد
 														بمناطق تفقر لذلك</a></h4>
-												<div class="_emp_jb">جمعية نماء</div>
+												<div class="_emp_jb">جمعية مساجد الطرق</div>
 											</div>
 										</div>
 										<div class="_list_right-info">
 											<ul>
 												<li>
 													<div class="_ljb_prices">
-														<h5>200 مليون ريال </h5><span>تكلفة المشروع</span>
+														<h5>10,000,000 ريال </h5><span>تكلفة المشروع</span>
 													</div>
 												</li>
-												<li><a href="job-detail.html" class="_jb_apply theme-bt"> عرض
+												<li><a href="{{route('endowment.projectDetails')}}" class="_jb_apply theme-bt"> عرض
 														المشروع</a></li>
 											</ul>
 										</div>
@@ -271,9 +215,8 @@
 										<div class="_large_jb_body_list_info">
 											<ul>
 												<li><i class="ti-location-pin"></i>السعودية الرياض</li>
-												<li><i class="ti-timer"></i>11 شهر</li>
-												<li><i class="ti-home"></i>تعليم</li>
-												<li><i class="ti-money"></i>100 ألف ريال</li>
+												<li><i class="ti-timer"></i>سنة و 6 أشهر</li>
+												<li><i class="ti-home"></i>بناء المساجد</li>
 											</ul>
 										</div>
 										<div class="_large_jb_body_list_explain">
@@ -281,15 +224,6 @@
 												طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير
 												على سبيل المثال لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
 												العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</p>
-											<div class="jb_req_skill">
-												<ul>
-													<li><span>مساجد</span></li>
-													<li><span>زواج</span></li>
-													<li><span>سقيا ماء</span></li>
-													<li><span>حفر آبار</span></li>
-													<li><span>أيتام</span></li>
-												</ul>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -304,116 +238,8 @@
 														alt=""></a>
 											</div>
 											<div class="_list_110_caption">
-												<h4 class="_jb_title"><a href="job-detail.html">كفالة آيتام لعدد 40
+												<h4 class="_jb_title"><a href="{{route('endowment.projectDetails')}}">كفالة آيتام لعدد 40
 														طفل</a></h4>
-												<div class="_emp_jb">دار العون</div>
-											</div>
-										</div>
-										<div class="_list_right-info">
-											<ul>
-												<li>
-													<div class="_ljb_prices">
-														<h5>50الف ريال</h5><span>تكلفة المشروع</span>
-													</div>
-												</li>
-												<li><a href="job-detail.html" class="_jb_apply theme-bt">عرض المشروع</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="_large_jb_body">
-										<div class="_large_jb_body_list_info">
-											<ul>
-												<li><i class="ti-location-pin"></i>السعودية الرياض</li>
-												<li><i class="ti-timer"></i>11 شهر</li>
-												<li><i class="ti-home"></i>تعليم</li>
-												<li><i class="ti-money"></i>100 ألف ريال</li>
-											</ul>
-										</div>
-										<div class="_large_jb_body_list_explain">
-											<p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور
-												طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير
-												على سبيل المثال لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-												العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</p>
-											<div class="jb_req_skill">
-												<ul>
-													<li><span>مساجد</span></li>
-													<li><span>زواج</span></li>
-													<li><span>سقيا ماء</span></li>
-													<li><span>حفر آبار</span></li>
-													<li><span>أيتام</span></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Single List Item -->
-								<div class="_large_jb_list72 shadow-0">
-									<div class="_large_jb_header">
-										<div class="_list_110">
-											<div class="_list_110_thumb">
-												<a href="employer-detail.html"><img
-														src="https://via.placeholder.com/100x100" class="img-fluid"
-														alt=""></a>
-											</div>
-											<div class="_list_110_caption">
-												<h4 class="_jb_title"><a href="job-detail.html">كفالة آيتام لعدد 40
-														طفل</a></h4>
-												<div class="_emp_jb">دار العون</div>
-											</div>
-										</div>
-										<div class="_list_right-info">
-											<ul>
-												<li>
-													<div class="_ljb_prices">
-														<h5>50الف ريال</h5><span>تكلفة المشروع</span>
-													</div>
-												</li>
-												<li><a href="job-detail.html" class="_jb_apply theme-bt">عرض المشروع</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="_large_jb_body">
-										<div class="_large_jb_body_list_info">
-											<ul>
-												<li><i class="ti-location-pin"></i>السعودية الرياض</li>
-												<li><i class="ti-timer"></i>11 شهر</li>
-												<li><i class="ti-home"></i>تعليم</li>
-												<li><i class="ti-money"></i>100 ألف ريال</li>
-											</ul>
-										</div>
-										<div class="_large_jb_body_list_explain">
-											<p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور
-												طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير
-												على سبيل المثال لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-												العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</p>
-											<div class="jb_req_skill">
-												<ul>
-													<li><span>مساجد</span></li>
-													<li><span>زواج</span></li>
-													<li><span>سقيا ماء</span></li>
-													<li><span>حفر آبار</span></li>
-													<li><span>أيتام</span></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Single List Item -->
-								<div class="_large_jb_list72 shadow-0">
-									<div class="_large_jb_header">
-										<div class="_list_110">
-											<div class="_list_110_thumb">
-												<a href="employer-detail.html"><img
-														src="https://via.placeholder.com/100x100" class="img-fluid"
-														alt=""></a>
-											</div>
-											<div class="_list_110_caption">
-												<h4 class="_jb_title"><a href="job-detail.html">حفر آبار بمناطق
-														مختلفة</a></h4>
 												<div class="_emp_jb">جمعية انسان</div>
 											</div>
 										</div>
@@ -421,10 +247,10 @@
 											<ul>
 												<li>
 													<div class="_ljb_prices">
-														<h5>50الف ريال</h5><span>تكلفة المشروع</span>
+														<h5>50,000 ريال</h5><span>تكلفة المشروع</span>
 													</div>
 												</li>
-												<li><a href="job-detail.html" class="_jb_apply theme-bt">عرض المشروع</a>
+												<li><a href="{{route('endowment.projectDetails')}}" class="_jb_apply theme-bt">عرض المشروع</a>
 												</li>
 											</ul>
 										</div>
@@ -434,8 +260,7 @@
 											<ul>
 												<li><i class="ti-location-pin"></i>السعودية الرياض</li>
 												<li><i class="ti-timer"></i>11 شهر</li>
-												<li><i class="ti-home"></i>تعليم</li>
-												<li><i class="ti-money"></i>100 ألف ريال</li>
+												<li><i class="ti-home"></i>كفالة</li>
 											</ul>
 										</div>
 										<div class="_large_jb_body_list_explain">
@@ -443,15 +268,6 @@
 												طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير
 												على سبيل المثال لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
 												العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</p>
-											<div class="jb_req_skill">
-												<ul>
-													<li><span>مساجد</span></li>
-													<li><span>زواج</span></li>
-													<li><span>سقيا ماء</span></li>
-													<li><span>حفر آبار</span></li>
-													<li><span>أيتام</span></li>
-												</ul>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -466,19 +282,19 @@
 														alt=""></a>
 											</div>
 											<div class="_list_110_caption">
-												<h4 class="_jb_title"><a href="job-detail.html">حفر آبار بمناطق
+												<h4 class="_jb_title"><a href="{{route('endowment.projectDetails')}}">حفر آبار بمناطق
 														مختلفة</a></h4>
-												<div class="_emp_jb">جمعية انسان</div>
+												<div class="_emp_jb">دار العون</div>
 											</div>
 										</div>
 										<div class="_list_right-info">
 											<ul>
 												<li>
 													<div class="_ljb_prices">
-														<h5>50الف ريال</h5><span>تكلفة المشروع</span>
+														<h5>100,000 ريال</h5><span>تكلفة المشروع</span>
 													</div>
 												</li>
-												<li><a href="job-detail.html" class="_jb_apply theme-bt">عرض المشروع</a>
+												<li><a href="{{route('endowment.projectDetails')}}" class="_jb_apply theme-bt">عرض المشروع</a>
 												</li>
 											</ul>
 										</div>
@@ -488,8 +304,7 @@
 											<ul>
 												<li><i class="ti-location-pin"></i>السعودية الرياض</li>
 												<li><i class="ti-timer"></i>11 شهر</li>
-												<li><i class="ti-home"></i>تعليم</li>
-												<li><i class="ti-money"></i>100 ألف ريال</li>
+												<li><i class="ti-home"></i>حفر آبار</li>
 											</ul>
 										</div>
 										<div class="_large_jb_body_list_explain">
@@ -497,15 +312,6 @@
 												طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير
 												على سبيل المثال لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
 												العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم</p>
-											<div class="jb_req_skill">
-												<ul>
-													<li><span>مساجد</span></li>
-													<li><span>زواج</span></li>
-													<li><span>سقيا ماء</span></li>
-													<li><span>حفر آبار</span></li>
-													<li><span>أيتام</span></li>
-												</ul>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -526,7 +332,7 @@
 									<li class="page-item"><a class="page-link" href="#">2</a></li>
 									<li class="page-item active"><a class="page-link" href="#">3</a></li>
 									<li class="page-item"><a class="page-link" href="#">...</a></li>
-									<li class="page-item"><a class="page-link" href="#">18</a></li>
+									<li class="page-item"><a class="page-link" href="#">11</a></li>
 									<li class="page-item">
 										<a class="page-link" href="#" aria-label="Next">
 											<span class="ti-arrow-left"></span>

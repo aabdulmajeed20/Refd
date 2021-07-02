@@ -34,7 +34,7 @@
 						<div class="mf-forget"><a href="#"><i class="ti-help"></i>نسيت كلمة المرور</a></div>
 					</div>
 				</div>
-				<div class="page-title bg-cover col-md-8" style="background:url(https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=925&q=80)no-repeat;height:100vh ;" data-overlay="9">
+				<div class="page-title bg-cover col-md-8" style="background:url({{URL::to('src/img/background-logo.jpg')}})no-repeat;height:100vh ;" data-overlay="9">
 
 				</div>
 

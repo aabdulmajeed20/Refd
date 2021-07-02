@@ -7,12 +7,12 @@
         <title>منصة رِفد - منصة خيرية موثوقة</title>
 		
         <!-- All Plugins Css -->
-        <link href="assets/css/plugins.css" rel="stylesheet">
+        <link href="{{ URL::to('src/css/plugins.css') }}" rel="stylesheet">
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="assets/css/styles.css" rel="stylesheet">
-        <link href="assets/css/rtl.css" rel="stylesheet">
+		<link href="{{ URL::to('src/css/styles.css') }}" rel="stylesheet">
+		<link href="{{ URL::to('src/css/rtl.css') }}" rel="stylesheet">
     </head>
 	
     <body class="blue-skin">
@@ -29,7 +29,7 @@
             <!-- ============================================================== -->
             <!-- Top header  -->
             <!-- ============================================================== -->
-            <!-- Start Navigation -->
+            {{-- <!-- Start Navigation -->
 			<div class="header header-light">
 				<div class="container">
 					<div class="row">
@@ -155,20 +155,22 @@
 					</div>
 				</div>
 			</div>
-			<!-- End Navigation -->
+			<!-- End Navigation --> --}}
 			<div class="clearfix"></div>
 			<!-- ============================================================== -->
 			<!-- Top header  -->
 			<!-- ============================================================== -->
 			
 			<!-- ============================ Page Title Start================================== -->
-			<div class="page-title bg-cover" style="background:url(https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=925&q=80)no-repeat;" data-overlay="5">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12"></div>
-					</div>
+			<div class="page-title bg-cover"
+			style="background:url({{URL::to('src/img/Header1.jpg')}})no-repeat;"
+			data-overlay="5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12"></div>
 				</div>
 			</div>
+		</div>
 			<!-- ============================ Page Title End ================================== -->
 			
 			<!-- ============================ Main Section Start ================================== -->
@@ -176,57 +178,7 @@
 				<div class="container-fluid">
 					<div class="row m-0">
 						
-						<div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
-							<div class="dashboard-navbar overlio-top">
-								
-								<div class="d-user-avater">
-									<img src="https://themezhub.net/workoo-demo/workoo/assets/img/team-1.jpg" class="img-fluid rounded" alt="">
-									<h4>عبد العزيز الأحمد</h4>
-									<span>المملكة العربية السعودية</span>
-								</div>
-								
-								<div class="d-navigation">
-									<ul id="metismenu">
-										<li class="active"><a href="dashboard.html">لوحة التحكم <i class="ti-dashboard"></i></a></li>
-										<li><a href="my-profile.html">الملف الشخصي <i class="ti-user"></i></a></li>
-										<li><a href="messages.html">الرسائل <i class="ti-email"></i></a></li>
-										<li>
-											<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المحفوظات <i class="ti-bookmark-alt"></i></a>
-											<ul>
-												<li><a href="bookmark-jobs.html">المحفوظات</a></li>
-												<li><a href="bookmark-candidates.html">Bookmark Candidates</a></li>
-												<li><a href="bookmark-freelancers.html">Bookmark Freelancers</a></li>
-												<li><a href="bookmark-employers.html">Bookmark Employers</a></li>
-											</ul>
-										</li>
-										<li><a href="reviews.html">المراجعات <i class="fa fa-star"></i></a></li>
-										<li>
-											<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المشاريع <i class="fa fa-briefcase"></i></a>
-											<ul>
-												<li><a href="manage-jobs.html">Manage Jobs</a></li>
-												<li><a href="manage-candidates.html">Manage Candidates</a></li>
-												<li><a href="manage-freelancers.html">Manage Freelancers</a></li>
-												<li><a href="manage-employers.html">Manage Employers</a></li>
-												<li><a href="create-reume.html">Create Resume</a></li>
-												<li><a href="post-job.html">Post A Job</a></li>
-												
-											</ul>
-										</li>
-										<li>
-											<a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المهام <i class="ti-desktop"></i></a>
-											<ul>
-												<li><a href="manage-task.html">Manage Task</a></li>
-												<li><a href="manage-bidders.html">Manage Bidders</a></li>
-												<li><a href="active-bids.html">My Active Bids</a></li>
-												<li><a href="post-task.html">Post A Task</a></li>
-											</ul>
-										</li>
-										<li><a href="#">تسجيل الخروج<i class="ti-power-off"></i></a></li>
-									</ul>
-								</div>
-								
-							</div>
-						</div>
+						@include('Charities.sideBar')
 						
 						<!-- Item Wrap Start -->
 						<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
@@ -271,42 +223,42 @@
 														<label>المصرف</label>
 														<select id="jb-category" class="form-control ">
 															<option value=""></option>
-															<option value="1">Finance & Accounting</option>
-															<option value="2">Banking</option>
-															<option value="3">Medical & Health</option>
-															<option value="4">Human Resources</option>
-															<option value="5">IT & Computor</option>
+															<option value="1">بناء المساجد</option>
+															<option value="2">التعليم</option>
+															<option value="3">الخدمات الطبية</option>
+															<option value="4">الفقراء والمساكين</option>
+															<option value="5">رعاية الأيتام</option>
 														</select>
 													</div>
 												</div>
-												
-												
 												<div class="col-xl-4 col-lg-6">
-													<div class="form-group">
-														<label>فكرة مختصرة عن المشروع</label>
-														<input type="text" class="form-control with-light">
-													</div>
-												</div>
-												
-												<div class="col-xl-4 col-lg-6">
-													<div class="form-group with-light">
-														<label>مسوغات المشروع</label>
-														<input type="text" class="form-control with-light">
-													</div>
-												</div>
-												
-												<div class="col-xl-4 col-lg-12">
-													<div class="form-group with-light">
-														<label> مخرجات المشروع</label>
-														<input type="text" class="form-control with-light">
-													</div>
-												</div>
-												<div class="col-xl-4 col-lg-12">
 													<div class="form-group">
 														<label>تكلفة المشروع</label>
 														<input type="text" class="form-control with-light">
 													</div>
 												</div>
+												
+												<div class="col-xl-12 col-lg-12">
+													<div class="form-group">
+														<label>فكرة مختصرة عن المشروع</label>
+														<textarea name="" id="" cols="30" rows="10" class="form-control with-light"></textarea>
+													</div>
+												</div>
+												
+												<div class="col-xl-12 col-lg-12">
+													<div class="form-group with-light">
+														<label>مسوغات المشروع</label>
+														<textarea name="" id="" cols="30" rows="10" class="form-control with-light"></textarea>
+													</div>
+												</div>
+												
+												<div class="col-xl-12 col-lg-12">
+													<div class="form-group with-light">
+														<label> مخرجات المشروع</label>
+														<textarea name="" id="" cols="30" rows="10" class="form-control with-light"></textarea>
+													</div>
+												</div>
+												
 											
 												<div class="col-xl-6 col-lg-12">
 													<div class="form-group">
@@ -334,13 +286,6 @@
 												</div>
 												
 												<div class="col-xl-12 col-lg-12">
-													<div class="form-group">
-														<label>وصف المشروع</label>
-														<textarea class="form-control with-light"></textarea>
-													</div>
-												</div>
-												
-												<div class="col-xl-12 col-lg-12">
 													<div class="custom-file">
 														<input type="file" class="custom-file-input" id="upfile">
 														<label class="custom-file-label" for="upfile">ارفع الملفات من هنا</label>
@@ -364,217 +309,9 @@
 			</section>
 			<!-- ============================ Main Section End ================================== -->
 			
-			<!-- ============================ Call To Action Start ================================== -->
-			<section class="call-to-act" style="background:#2944c1 url(assets/img/landing-bg.png) no-repeat">
-				<div class="container">
-					<div class="row justify-content-center">
-					
-						<div class="col-lg-7 col-md-8">
-							<div class="clt-caption text-center mb-4">
-								<h3 class="text-light">النشرة الاخبارية</h3>
-								<p class="text-light">اشترك في نشرتنا الاخبارية لتصلك المشاريع الجديدة</p>
-							</div>
-							<div class="inner-flexible-box subscribe-box">
-								<div class="input-group">
-									<input type="text" class="form-control large" placeholder="بريدك الالكتروني">
-									<button class="btn btn-subscribe bg-dark" type="button"><i class="fa fa-arrow-left"></i></button>
-								</div>
-							</div>
-						</div>				
-					</div>
-				</div>
-			</section>
-			<!-- ============================ Call To Action End ================================== -->
-			
 			<!-- =========================== Footer Start ========================================= -->
-			<footer class="dark-footer skin-dark-footer">
-				<div>
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-4 col-md-6">
-								<div class="footer-widget">
-									<img src="assets/img/logo-light.png" class="img-fluid f-logo" width="120" alt="">
-									<p>407-472 Rue Saint-Sulpice, Montreal<br>Quebec, H2Y 2V8</p>
-									<ul class="footer-bottom-social">
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter"></i></a></li>
-										<li><a href="#"><i class="ti-instagram"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>		
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">روابط ذات صلة</h4>
-									<ul class="footer-menu">
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">FAQs Page</a></li>
-										<li><a href="#">Checkout</a></li>
-										<li><a href="#">Login</a></li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">تصنيفات المشاريع</h4>
-									<ul class="footer-menu">
-										<li><a href="#">Booking</a></li>
-										<li><a href="#">Stays</a></li>
-										<li><a href="#">Adventures</a></li>
-										<li><a href="#">Author Detail</a></li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">الجمعيات</h4>
-									<ul class="footer-menu">
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">Jobs</a></li>
-										<li><a href="#">Events</a></li>
-										<li><a href="#">Press</a></li>
-									</ul>
-								</div>
-							</div>
-									
-							<div class="col-lg-2 col-md-4">
-								<div class="footer-widget">
-									<h4 class="widget-title">التواصل</h4>
-									<ul class="footer-menu">
-										<li><a href="#">Support</a></li>
-										<li><a href="#">Contact Us</a></li>
-										<li><a href="#">Privacy &amp; Terms</a></li>
-									</ul>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-				
-				<div class="footer-bottom">
-					<div class="container">
-						<div class="row align-items-center">
-							
-							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">جميع الحقوق محفوظة لدى <a href="https://hakkam.co/Refd">رِفد</a> © 2021   </p>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</footer>
+			@include('Home.Common.footer')
 			<!-- =========================== Footer End ========================================= -->
-			
-			<!-- Log In Modal -->
-			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
-					<div class="modal-content" id="registermodal">
-						<div class="modal-header">
-							<h4>Sign In</h4>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="ti-close"></i></span></button>
-						</div>
-						<div class="modal-body">
-							
-							<div class="login-form">
-								<form>
-								
-									<div class="form-group">
-										<label>User Name</label>
-										<input type="text" class="form-control" placeholder="Username">
-									</div>
-									
-									<div class="form-group">
-										<label>Password</label>
-										<input type="password" class="form-control" placeholder="*******">
-									</div>
-									
-									<div class="form-group">
-										<button type="submit" class="btn dark-2 btn-md full-width pop-login">Login</button>
-									</div>
-								
-								</form>
-							</div>
-							
-							<div class="form-group text-center">
-								<span>Or Signin with</span>
-							</div>
-							
-							<div class="social_logs mb-4">
-								<ul class="shares_jobs text-center">
-									<li><a href="#" class="share fb"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="share gp"><i class="fa fa-google"></i></a></li>
-									<li><a href="#" class="share ln"><i class="fa fa-linkedin"></i></a></li>
-								</ul>
-							</div>
-							
-						</div>
-						<div class="modal-footer">
-							<div class="mf-link"><i class="ti-user"></i>Haven't An Account?<a href="javascript:void(0)" class="theme-cl"> Sign Up</a></div>
-							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Modal -->
-
-			<!-- Upload Resume -->
-			<div class="modal fade" id="upload-resume" tabindex="-1" role="dialog" aria-labelledby="resumeupload" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
-					<div class="modal-content" id="resumeupload">
-						<div class="modal-header">
-							<h4>Upload Resume</h4>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="ti-close"></i></span></button>
-						</div>
-						<div class="modal-body">
-							
-							<div class="login-form">
-								<form>
-								
-									<div class="form-row">
-										<div class="col-lg-6 col-md-12">
-											<div class="form-group">
-												<label>Full Name</label>
-												<input type="text" class="form-control" placeholder="Username">
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-12">
-											<div class="form-group">
-												<label>E-Mail ID</label>
-												<input type="email" class="form-control" placeholder="ucicl@gmail.com">
-											</div>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<label>Paste Your Resume</label>
-										<textarea class="form-control ht-150" placeholder="Copy & Paste Resume"></textarea>
-									</div>
-									
-									<div class="form-group">
-										<label class="light">doc, docx,pdf,txt,png</label>
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="uploadResume">
-											<label class="custom-file-label" for="uploadResume"><i class="ti-link mr-1"></i>Upload Resume</label>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<button type="submit" class="btn dark-2 btn-md full-width pop-login">Upload Resume</button>
-									</div>
-								
-								</form>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Upload Resume -->		
 
 		</div>
 		<!-- ============================================================== -->
@@ -584,19 +321,20 @@
 		<!-- ============================================================== -->
 		<!-- All Jquery -->
 		<!-- ============================================================== -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/popper.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
-		<script src="assets/js/select2.min.js"></script>
-		<script src="assets/js/owl.carousel.min.js"></script>
-		<script src="assets/js/ion.rangeSlider.min.js"></script>
-		<script src="assets/js/counterup.min.js"></script>
-		<script src="assets/js/materialize.min.js"></script>
-		<script src="assets/js/metisMenu.min.js"></script>
-		<script src="assets/js/custom.js"></script>
+		<script src="{{ URL::to('src/js/jquery.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/popper.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/bootstrap.min.js') }}"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+		</script>
+
+		<script src="{{ URL::to('src/js/select2.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/owl.carousel.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/ion.rangeSlider.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/counterup.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/materialize.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/metisMenu.min.js') }}"></script>
+		<script src="{{ URL::to('src/js/custom.js') }}"></script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->

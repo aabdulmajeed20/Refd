@@ -10,13 +10,13 @@
 
         <div class="d-navigation">
             <ul id="metismenu">
-                <li class="active"><a href="dashboard.html">لوحة التحكم <i
+                <li class="active"><a href="{{route('endowment.dashboard')}}">لوحة التحكم <i
                             class="ti-dashboard"></i></a></li>
-                <li><a href="my-profile.html">الملف الشخصي <i class="ti-user"></i></a></li>
+                <li><a href="#">الملف الشخصي <i class="ti-user"></i></a></li>
                 <li><a href="{{route('endowment.messages')}}">الرسائل <i class="ti-email"></i></a></li>
-                <li>
+                {{-- <li>
                     <a href="{{route('endowment.bookmarks')}}" aria-expanded="false">المحفوظات <i class="ti-bookmark-alt"></i></a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="javascript:void(0);" class="has-arrow" aria-expanded="false">المشاريع
                         <i class="fa fa-briefcase"></i></a>

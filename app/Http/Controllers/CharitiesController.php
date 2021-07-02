@@ -89,10 +89,20 @@ class CharitiesController extends Controller
         $charity = Charity::find(Auth::guard('charity')->id());
         return view('Charities.profile', compact('charity'))->render();
     }
+    public function postProject()
+    {
+        $charity = Charity::find(Auth::guard('charity')->id());
+        return view('Charities.postProject', compact('charity'))->render();
+    }
+    public function messages()
+    {
+        $charity = Charity::find(Auth::guard('charity')->id());
+        return view('Charities.messages', compact('charity'))->render();
+    }
 
     public function showLogin()
     {
-        return view('Charity.login');
+        return view('Charities.login');
     }
 
     public function logout()

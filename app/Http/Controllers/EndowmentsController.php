@@ -89,6 +89,12 @@ class EndowmentsController extends Controller
         return view('Endowment.login');
     }
 
+    public function logout()
+    {
+        Auth::guard('endowment')->logout();
+        return redirect('/');
+    }
+
     public function dashboard()
     {
         $endowment = Endowment::find(Auth::guard('endowment')->id());
@@ -128,5 +134,10 @@ class EndowmentsController extends Controller
     {
         $endowment = Endowment::find(Auth::guard('endowment')->id());
         return view('Endowments.alkhair', compact('endowment'))->render();
+    }
+    public function projectDetails()
+    {
+        $endowment = Endowment::find(Auth::guard('endowment')->id());
+        return view('Endowments.projectDetails', compact('endowment'))->render();
     }
 }

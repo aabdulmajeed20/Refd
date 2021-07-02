@@ -39,7 +39,7 @@
 
 		<!-- ============================ Page Title Start================================== -->
 		<div class="page-title bg-cover"
-			style="background:url(https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=925&q=80)no-repeat;"
+			style="background:url({{URL::to('src/img/Header1.jpg')}})no-repeat;"
 			data-overlay="5">
 			<div class="container">
 				<div class="row">
@@ -53,26 +53,7 @@
 		<section class="gray-bg pt-4">
 			<div class="container-fluid">
 				<div class="row m-0">
-					<div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
-						<div class="dashboard-navbar overlio-top">
-
-							<div class="d-user-avater">
-								<img src="https://linkconnects.com/uploads/user_images/e2202d6d84cac089c7a803e90f3d76a9.png" class="img-fluid rounded" alt="">
-								<h4>{{$charity->name}}</h4>
-								<span>المملكة العربية السعودية</span>
-							</div>
-
-							<div class="d-navigation">
-								<ul id="metismenu">
-									<li><a href="my-profile.html">ملف الجمعية <i class="ti-user"></i></a></li>
-									<li><a href="messages.html">الرسائل <i class="ti-email"></i></a></li>
-									<li><a href="search-services-list.html">المشاريع  <i class="ti-layout-cta-btn-right"></i></a></li>
-									<li><a href="{{route('charity.logout')}}">تسجيل الخروج <i class="ti-power-off"></i> </a></li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
+					@include('Charities.sideBar')
 					<!-- Item Wrap Start -->
 					<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
 						<div class="row">
@@ -121,25 +102,25 @@
 													<div class="col-xl-6 col-lg-6">
 														<div class="form-group">
 															<label>اسم الجمعية</label>
-															<h6>جمعية الرحمة الخيرية </h6>
+															<h6>{{$charity->name}} </h6>
 														</div>
 													</div>
 													<div class="col-xl-6 col-lg-6">
 														<div class="form-group">
 															<label>البريد الالكتروني</label>
-															<h6>alra7ma@gmail.com</h6>
+															<h6>{{$charity->email}}</h6>
 														</div>
 													</div>
 													<div class="col-xl-6 col-lg-6">
 														<div class="form-group">
 															<label>المنطقة</label>
-															<h6>الرياض </h6>
+															<h6>الحجاز </h6>
 														</div>
 													</div>
 													<div class="col-xl-6 col-lg-6">
 														<div class="form-group">
 															<label>المدينة</label>
-															<h6>جدة</h6>
+															<h6>مكة</h6>
 														</div>
 													</div>
 												<div class="files_dates row" style="margin-top:20px;width: 100%;">
@@ -179,7 +160,7 @@
 								<div class="_dashboard_content">
 									<div class="_dashboard_content_header">
 										<div class="_dashboard__header_flex">
-											<h4><i class="ti-lock mr-1"></i>المشاريع المرفوعة</h4>
+											<h4><i class="ti-lock mr-1"></i>المشاريع المرفوعة</h4> <a href="#">عرض الكل</a>
 										</div>
 									</div>
 
@@ -193,7 +174,7 @@
 														</div>
 														<div class="_cp_flexed">
 															<div class="_cp_flexed_left">
-																<h5>جمعية نماء</h5>
+																<h5>مشروع افطار الصائمين</h5>
 																<span>17 يناير 2021</span>
 															</div>
 															<div class="_cp_flexed_right">
@@ -211,8 +192,8 @@
 														</div>
 														<div class="_cp_flexed">
 															<div class="_cp_flexed_left">
-																<h5>جمعية إنسان</h5>
-																<span>20 ديسمبر 2020</span>
+																<h5>مشروع فرحة اليتيم</h5>
+																<span>20 مارس 2021</span>
 															</div>
 															<div class="_cp_flexed_right">
 																<a href="#" class="prt_link"><i class="fa fa-link"></i></a>
@@ -229,8 +210,8 @@
 														</div>
 														<div class="_cp_flexed">
 															<div class="_cp_flexed_left">
-																<h5>حياة كريمة</h5>
-																<span>17 اغسطس 20010</span>
+																<h5>مشروع السلال الغذائية</h5>
+																<span>17 فبراير 2021</span>
 															</div>
 															<div class="_cp_flexed_right">
 																<a href="#" class="prt_link"><i class="fa fa-link"></i></a>
@@ -239,7 +220,7 @@
 													</div>
 												</div>
 	
-												<button type="button" class="btn btn-primary">عرض المشاريع المرفوعة</button>
+												<a href="{{route('charity.postProject')}}" class="btn btn-primary">رفع مشروع جديد</a>
 										
 										</div>
 									</div>
@@ -252,107 +233,8 @@
 
 		</section>
 		<!-- ============================ Main Section End ================================== -->
-		<section class="call-to-act" style="background:#2944c1 url(assets/img/landing-bg.png) no-repeat">
-			<div class="container">
-				<div class="row justify-content-center">
-
-					<div class="col-lg-7 col-md-8">
-						<div class="clt-caption text-center mb-4">
-							<h3 class="text-light">النشرة الاخبارية</h3>
-							<p class="text-light">اشترك في نشرتنا الاخبارية لتصلك المشاريع الجديدة</p>
-						</div>
-						<div class="inner-flexible-box subscribe-box">
-							<div class="input-group">
-								<input type="text" class="form-control large" placeholder="بريدك الالكتروني">
-								<button class="btn btn-subscribe bg-dark" type="button"><i
-										class="fa fa-arrow-left"></i></button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 		<!-- =========================== Footer Start ========================================= -->
-		<footer class="dark-footer skin-dark-footer">
-			<div>
-				<div class="container">
-					<div class="row">
-
-						<div class="col-lg-4 col-md-6">
-							<div class="footer-widget">
-								<img src="{{URL::to('src/img/logo.png')}}" class="img-fluid f-logo" width="120" alt="">
-								<p>منصة إجتماعية موثوقة <br>السعودية,الرياض</p>
-								<ul class="footer-bottom-social">
-									<li><a href="#"><i class="ti-facebook"></i></a></li>
-									<li><a href="#"><i class="ti-twitter"></i></a></li>
-									<li><a href="#"><i class="ti-instagram"></i></a></li>
-									<li><a href="#"><i class="ti-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-4">
-							<div class="footer-widget">
-								<h4 class="widget-title">روابط ذات صلة</h4>
-								<ul class="footer-menu">
-									<li><a href="#">من نحن</a></li>
-									<li><a href="#">الأسئلة الشائعة</a></li>
-									<li><a href="#">مشروعك</a></li>
-									<li><a href="#">تسجيل الدخول</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-4">
-							<div class="footer-widget">
-								<h4 class="widget-title">تصنيفات المشاريع</h4>
-								<ul class="footer-menu">
-									<li><a href="#">صحة</a></li>
-									<li><a href="#">تعليم</a></li>
-									<li><a href="#">زواج</a></li>
-									<li><a href="#">آبار</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-4">
-							<div class="footer-widget">
-								<h4 class="widget-title">الجمعيات</h4>
-								<ul class="footer-menu">
-									<li><a href="#">من نحن</a></li>
-									<li><a href="#">المشاريع</a></li>
-									<li><a href="#">أحدث أخبارنا</a></li>
-									<li><a href="#">تواصل معنا</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-4">
-							<div class="footer-widget">
-								<h4 class="widget-title">التواصل</h4>
-								<ul class="footer-menu">
-									<li><a href="#">دعم</a></li>
-									<li><a href="#">اعرض مشروعك</a></li>
-									<li><a href="#">الاحكام &amp; السياسات</a></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row align-items-center">
-
-						<div class="col-lg-12 col-md-12 text-center">
-							<p class="mb-0">جميع الحقوق محفوظة لدى <a href="https://hakkam.co/Refd">رِفد</a> © 2021 </p>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</footer>
+		@include('Home.Common.footer')
 		<!-- =========================== Footer End ========================================= -->
 
 	
